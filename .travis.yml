@@ -40,8 +40,7 @@ before_install:
     - mkdir cm && cd cm && repo init -u git://github.com/LineageOS/android.git -b cm-14.1
     
 script:
-    - cd cm && repo sync
+    - repo sync
     - source build/envsetup.sh
-    - make clobber
     - lunch lineage_bacon
     - mka bacon
