@@ -1,0 +1,43 @@
+
+dist: trusty
+sudo: false
+
+jdk:
+    - openjdk8
+
+addons:
+  apt:
+    packages:
+    - cmake
+    - time
+    - git-core
+    - gnupg
+    - flex
+    - bison
+    - gperf
+    - build-essential
+    - zip
+    - curl
+    - zlib1g-dev
+    - gcc-multilib
+    - g++-multilib
+    - libc6-dev-i386
+    - lib32ncurses5-dev
+    - x11proto-core-dev
+    - libx11-dev
+    - lib32z-dev
+    - ccache
+    - libgl1-mesa-dev
+    - libxml2-utils
+    - xsltproc
+    - unzip
+
+before_install:
+    - mkdir ~/bin
+    - PATH=~/bin:$PATH
+    - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+    - chmod a+x ~/bin/repo
+    - mkdir cm && cd cm && repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+    
+script:
+    - cd cm && repo sync
