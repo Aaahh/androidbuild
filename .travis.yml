@@ -37,6 +37,7 @@ addons:
     - unzip
 
 before_install:
+    - df -h
     - PATH=/home/travis/bin:$PATH
     - curl https://storage.googleapis.com/git-repo-downloads/repo > /home/travis/bin/repo
     - chmod a+x ~/bin/repo
