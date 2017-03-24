@@ -5,7 +5,7 @@ before_install:
     - df -h
     - cd /
     - ls -a
-    - cd /etc
+    - cat /etc/hosts
     - ls
     - mkdir cm
     - cp -a /home/travis/cm /etc/hosts/cm
