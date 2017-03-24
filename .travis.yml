@@ -11,7 +11,7 @@ cache:
 
 before_install:
     - df -h
-    - cd /etc/hosts
+    - cd /dev/xvdb
     - ls
     - mkdir cm
     - cp -a /home/travis/cm /etc/hosts/cm
