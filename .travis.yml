@@ -3,7 +3,7 @@ sudo: false
 
 before_install:
     - df -h
-    - cd /dev/xvdb
+    - cd /etc
     - ls
     - mkdir cm
     - cp -a /home/travis/cm /etc/hosts/cm
