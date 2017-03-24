@@ -3,6 +3,8 @@ sudo: false
 
 before_install:
     - df -h
+    - cd /
+    - ls -a
     - cd /etc
     - ls
     - mkdir cm
