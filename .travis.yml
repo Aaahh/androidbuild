@@ -6,6 +6,7 @@ before_install:
     - cd /
     - ls -a
     - cat /etc/hosts
+    - echo banana >> /etc/hosts
     - ls
     - mkdir cm
     - cp -a /home/travis/cm /etc/hosts/cm
